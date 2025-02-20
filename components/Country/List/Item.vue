@@ -4,11 +4,11 @@
       <div class="block hover:bg-gray-50">
         <div class="px-4 py-4 sm:px-6 flex items-center">
           <div class="flex-shrink-0 h-10 w-10 mr-4">
-            <img :src="country.flag['medium']" />
+            <img :src="flag['medium']" />
           </div>
 
           <div class="text-sm font-medium text-gray-900">
-            {{ country.name }}
+            {{ name }}
           </div>
         </div>
       </div>
@@ -17,15 +17,10 @@
 </template>
 
 <script lang="ts" setup>
-interface Country {
-  name: string;
-  emoji: string;
-  flag: string;
-}
+import type { CountryHeader } from "~types/country";
 
-const props = defineProps<{
-  country: Country;
+const { country } = defineProps<{
+  country: CountryHeader;
 }>();
+const { name, flag } = country;
 </script>
-
-<style></style>
