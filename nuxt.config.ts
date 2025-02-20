@@ -12,4 +12,5 @@ export default defineNuxtConfig({
       countryAPI: process.env.API_KEY_COUNTRY_API,
     },
   },
+  modules: ["@nuxt/test-utils/module"],
 });
