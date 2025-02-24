@@ -1,8 +1,11 @@
 <template>
   <div class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">
-        Country Explorer 🌎
+      <h1
+        class="text-3xl font-bold text-center text-gray-900 mb-8"
+        data-cy="home-page-tagline"
+      >
+        Explore the world
       </h1>
 
       <ul class="bg-white shadow overflow-hidden sm:rounded-md">
@@ -11,7 +14,11 @@
           :country="country"
         />
       </ul>
-      <ButtonSeeMore @increment="incrementVisibleCountries" />
+
+      <ButtonSeeMore
+        @increment="incrementVisibleCountries"
+        v-if="visibleCountries.length < countries.length"
+      />
     </div>
   </div>
 </template>
