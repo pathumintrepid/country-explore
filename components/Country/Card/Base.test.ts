@@ -20,7 +20,6 @@ describe("Base.vue", () => {
     const component = await mountSuspended(Base);
     const childDiv = component.find("div.mx-auto");
 
-    console.log(childDiv.classes());
     expect(childDiv).toBeTruthy();
     expect(childDiv.classes()).toContain("max-w-4xl");
   });

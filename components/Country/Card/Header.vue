@@ -4,8 +4,7 @@
       <img
         class="h-48 w-full object-contain md:w-48"
         :src="flagURL"
-        alt="Flag of the United
-          States"
+        :alt="`Flag of {{ name }}`"
       />
     </div>
     <div class="p-8">
@@ -14,10 +13,13 @@
       >
         Country Details
       </div>
-      <h1 class="block mt-1 text-3xl leading-tight font-bold text-black">
+      <h1
+        class="block mt-1 text-3xl leading-tight font-bold text-black"
+        data-cy="name"
+      >
         {{ name }}
       </h1>
-      <p class="mt-2 text-gray-500">
+      <p class="mt-2 text-gray-500" data-cy="official_name">
         {{ official_name }}
       </p>
     </div>

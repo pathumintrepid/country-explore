@@ -1,5 +1,9 @@
 <template>
-  <li :key="country.name" class="border-b border-gray-200 last:border-b-0">
+  <li
+    :key="country.name"
+    class="border-b border-gray-200 last:border-b-0"
+    data-cy="country-list-item"
+  >
     <NuxtLink :to="`/country/${country.name}`">
       <div class="block hover:bg-gray-50">
         <div class="px-4 py-4 sm:px-6 flex items-center">
